@@ -18,8 +18,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "js-code-wrapper"
   gem.homepage = "http://github.com/dom1nga/js-code-wrapper"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = "Provides helper method 'wrap_js_code'that wraps javascript code into '<code></code>' tags"
+  gem.description = "Usage: wrap_js_code('<script>alert('wrap me!');</script>') # => '<code><script>alert('wrap me!');</script></code>'"
   gem.email = "beloved.dom1nga@gmail.com"
   gem.authors = ["dom1nga"]
   # dependencies defined in Gemfile
