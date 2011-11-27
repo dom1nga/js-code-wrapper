@@ -1,6 +1,6 @@
 # js-code-wrapper #
 
-Gem provides helper method 'wrap_js_code' that wraps javascript into '<code></code>' tags.
+Gem provides helper method `wrap_js_code` that wraps javascript into `<code></code>` tags.
 
 ## Installation ##
 
