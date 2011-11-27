@@ -13,5 +13,5 @@ to your `Gemfile`.
 ## Usage ##
 
 ``` ruby
-  wrap_js_code('<script>alert('wrap me!');</script>') # => '<code><script>alert('wrap me!');</script></code>'"
+  wrap_js_code("<script>alert('wrap me!');</script>") # => "<code><script>alert('wrap me!');</script></code>"
 ```
