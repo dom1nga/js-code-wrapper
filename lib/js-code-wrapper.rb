@@ -15,13 +15,13 @@ module JsCodeWrapper
   private
 
   def code_tag_coords(text)
-    code_begin = text.to_enum(:scan,/(<code)/i).map { |m,| $`.size }
-    code_end = text.to_enum(:scan,/(<\/code>)/i).map { |m,| $`.size }
+    code_begin = text.to_enum(:scan,/(<code)/i).map { $`.size }
+    code_end = text.to_enum(:scan,/(<\/code>)/i).map { $`.size }
     0.upto(code_begin.length - 1).map {|i| [code_begin[i], code_end[i]] }
   end
 
   def script_to_code_tags_inclusion(text, code_coords)
-    text.to_enum(:scan,/(<script{1}[^<]*<\/script>{1})/i).map { |m,| $`.size }.map { |v| [v, code_coords.map{|c| c[0] < v && v < c[1] }.compact.any?] }
+    text.to_enum(:scan,/(<script{1}[^<]*<\/script>{1})/i).map { $`.size }.map { |v| [v, code_coords.map{|c| c[0] < v && v < c[1] }.compact.any?] }
   end
 
   def insert_code_tags(text, code_coords)
