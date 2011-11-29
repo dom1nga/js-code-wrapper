@@ -33,5 +33,15 @@ describe JsCodeWrapper do
                    "<code><script>alert('wrap me!')</script></code>"
     end
 
+    it "should return the text with link wrapped into code tags if link contains event attribute" do
+      wrap_js_code('<a href="#" onclick="alert(\'wrap me!\'); return 0;">link</a>').should ==
+                   "<code><a href=\"#\" onclick=\"alert('wrap me!'); return 0;\">link</a></code>"
+    end
+
+    it "should return the text with tags without changes if tags not contains event attributes" do
+      wrap_js_code('<a href="#">link</a><div class="div1"></div><p>text1</p>').should ==
+                   "<a href=\"#\">link</a><div class=\"div1\"></div>\n<p>text1</p>"
+    end
+
   end
 end
