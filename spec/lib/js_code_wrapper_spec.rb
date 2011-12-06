@@ -42,6 +42,11 @@ describe JsCodeWrapper do
       wrap_js_code('<a href="#">link</a><div class="div1"></div><p>text1</p>').should ==
                    "<a href=\"#\">link</a><div class=\"div1\"></div>\n<p>text1</p>"
     end
+    
+    it "should return the text with escaped java script" do
+      wrap_js_code("<script>alert('wrap me!')</script>", :escape_js => true).should ==
+                   "&lt;script&gt;alert('wrap me!')&lt;/script&gt;"
+    end
 
   end
 end
