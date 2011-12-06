@@ -14,4 +14,5 @@ to your `Gemfile`.
 
 ``` ruby
   wrap_js_code("<script>alert('wrap me!');</script>") # => "<code><script>alert('wrap me!');</script></code>"
+  wrap_js_code("<script>alert('wrap me!');</script>", :escape_js => true) # => "&lt;script&gt;alert('wrap me!');&lt;/script&gt;"
 ```
