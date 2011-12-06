@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "js-code-wrapper"
-  s.version = "0.1.2"
+  s.name = %q{js-code-wrapper}
+  s.version = "0.1.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["dom1nga"]
-  s.date = "2011-11-29"
-  s.description = "Usage: wrap_js_code('<script>alert('wrap me!');</script>') # => '<code><script>alert('wrap me!');</script></code>'"
-  s.email = "beloved.dom1nga@gmail.com"
+  s.authors = [%q{dom1nga}]
+  s.date = %q{2011-12-06}
+  s.description = %q{Usage: wrap_js_code('<script>alert('wrap me!');</script>') # => '<code><script>alert('wrap me!');</script></code>'}
+  s.email = %q{beloved.dom1nga@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.md"
@@ -30,11 +30,11 @@ Gem::Specification.new do |s|
     "spec/lib/js_code_wrapper_spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = "http://github.com/dom1nga/js-code-wrapper"
-  s.licenses = ["MIT"]
-  s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.10"
-  s.summary = "Provides helper method 'wrap_js_code' that wraps javascript code into '<code></code>' tags"
+  s.homepage = %q{http://github.com/dom1nga/js-code-wrapper}
+  s.licenses = [%q{MIT}]
+  s.require_paths = [%q{lib}]
+  s.rubygems_version = %q{1.8.7}
+  s.summary = %q{Provides helper method 'wrap_js_code' that wraps javascript code into '<code></code>' tags}
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
