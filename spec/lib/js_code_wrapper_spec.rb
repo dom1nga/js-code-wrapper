@@ -42,10 +42,15 @@ describe JsCodeWrapper do
       JsCodeWrapper.wrap_js_code('<a href="#">link</a><div class="div1"></div><p>text1</p>').should ==
                    "<a href=\"#\">link</a><div class=\"div1\"></div>\n<p>text1</p>"
     end
-    
+
     it "should return the text with escaped java script" do
       JsCodeWrapper.wrap_js_code("<script>alert('wrap me!')</script>", :escape_js => true).should ==
                    "&lt;script&gt;alert('wrap me!')&lt;/script&gt;"
+    end
+
+    it "should return the text with script body wrapped into code tags when tag contains script body duplicated in text" do
+      JsCodeWrapper.wrap_js_code('<code><a href="#" onclick="alert(\'wrap me!\'); return 0;">link</a></code><a href="#" onclick="alert(\'wrap me!\'); return 0;">link</a>').should ==
+                                 '<code><a href="#" onclick="alert(\'wrap me!\'); return 0;">link</a></code><code><a href="#" onclick="alert(\'wrap me!\'); return 0;">link</a></code>'
     end
 
   end
