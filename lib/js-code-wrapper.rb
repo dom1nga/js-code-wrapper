@@ -11,7 +11,8 @@ module JsCodeWrapper
     end
     doc.xpath("//body/*").to_s.scan(/<text>(.*)<\/text>/im)[0][0]
   end
+  
+  module_function :wrap_js_code
 end
 
-Object.send(:include, JsCodeWrapper)
 ActionView::Base.send(:include, JsCodeWrapper) if defined?(ActionView::Base)
